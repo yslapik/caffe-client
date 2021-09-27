@@ -1,36 +1,12 @@
-<div style="padding: 32px">
-  <div class="example-container mat-elevation-z8">
-    <mat-table #table [dataSource]="dataSource">
-
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef> Позиция </mat-header-cell>
-        <mat-cell *matCellDef="let position"> {{position.name}} </mat-cell>
-      </ng-container>
-
-      <!-- price Column -->
-      <ng-container matColumnDef="price">
-        <mat-header-cell *matHeaderCellDef> Цена </mat-header-cell>
-        <mat-cell *matCellDef="let position"> {{position.price}} </mat-cell>
-      </ng-container>
-
-      <!-- Count Column -->
-      <ng-container matColumnDef="count" class="count-container">
-        <mat-header-cell *matHeaderCellDef> Продано </mat-header-cell>
-        <mat-cell *matCellDef="let position">
-
-  <input matInput [value]="position.count" [(ngModel)]="position.count">
-
-        </mat-cell>
-      </ng-container>
-
-      <!-- Comment Column -->
-      <ng-container matColumnDef="comment">
-        <mat-header-cell *matHeaderCellDef> Comment </mat-header-cell>
-        <mat-cell *matCellDef="let position">
-        </mat-cell>
-      </ng-container>
-
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+      <items-table></items-table>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

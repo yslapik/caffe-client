@@ -1,0 +1,38 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.mat-row {
+  align-items: stretch;
+
+  .mat-cell {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #dabbbb;
+  }
+}
+.mat-column-symbol, .mat-column-name {
+  max-width: 160px;
+}
+input {
+  float:right;
+  width:200px;
+  border:1px solid #dadada;
+  font-size:20px;
+  padding:5px;
+  margin-top:-10px;
+}
+
+input:focus {
+  outline:none;
+  border-color:#9ecaed;
+  box-shadow:0 0 10px #9ecaed;
+}

@@ -1,38 +1,17 @@
-.example-container {
-  display: flex;
-  flex-direction: column;
-  max-height: 500px;
-  min-width: 300px;
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
 }
 
-.mat-table {
-  overflow: auto;
-  max-height: 500px;
+mat-sidenav {
+  background-color: aqua;
+  width: 250px;
 }
 
-.mat-row {
-  align-items: stretch;
-
-  .mat-cell {
-    display: flex;
-    align-items: center;
-    border-left: 1px solid #dabbbb;
-  }
+main {
+  padding: 10px;
 }
-.mat-column-symbol, .mat-column-name {
-  max-width: 160px;
-}
-input {
-  float:right;
-  width:200px;
-  border:1px solid #dadada;
-  font-size:20px;
-  padding:5px;
-  margin-top:-10px;
-}
-
-input:focus {
-  outline:none;
-  border-color:#9ecaed;
-  box-shadow:0 0 10px #9ecaed;
+/* for sidenav to take a whole page */
+html, body {
+  margin: 0;
+  height: 100%;
 }
