@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {ItemsTableComponent} from "./items-table/items-table.component";
-import {AppComponent} from "./app.component";
-import {HomepageComponent} from "./navigation/homepage/homepage.component";
+import {HomepageComponent, ResiduesComponent, SalesComponent} from "./navigation";
+
 
 const routes: Routes = [
-  { path: 'sales', component: ItemsTableComponent },
+  { path: 'sales', component: SalesComponent },
+  { path: 'residues', component: ResiduesComponent },
   { path: '', component: HomepageComponent }
 ];
 

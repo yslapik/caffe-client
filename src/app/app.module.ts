@@ -13,8 +13,12 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { HomepageComponent } from './navigation/homepage/homepage.component';
+import { ResiduesComponent } from './navigation/residues/residues.component';
+import { SalesComponent } from './navigation/sales/sales.component';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { HomepageComponent } from './navigation/homepage/homepage.component';
     ItemsTableComponent,
     HeaderComponent,
     SidenavListComponent,
-    HomepageComponent
+    HomepageComponent,
+    ResiduesComponent,
+    SalesComponent
   ],
     imports: [
       BrowserModule,
@@ -36,7 +42,8 @@ import { HomepageComponent } from './navigation/homepage/homepage.component';
       MatSidenavModule,
       MatIconModule,
       MatButtonModule,
-      MatListModule
+      MatListModule,
+      MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
