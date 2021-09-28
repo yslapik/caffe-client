@@ -5,20 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from "@angular/material/table";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import { ItemsTableComponent } from './items-table/items-table.component';
+import {MatFormFieldModule } from "@angular/material/form-field";
+import { ItemsTableComponent } from './components';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { HeaderComponent } from './navigation/header/header.component';
+import { HeaderComponent, SidenavListComponent, HomepageComponent, ResiduesComponent, SalesComponent } from './navigation';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-
-import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
-import { HomepageComponent } from './navigation/homepage/homepage.component';
-import { ResiduesComponent } from './navigation/residues/residues.component';
-import { SalesComponent } from './navigation/sales/sales.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatNativeDateModule} from '@angular/material/core';
+import { ActionsPanelComponent } from './navigation/sales/actionsPanel/actionsPanel.component';
+import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import {MatTabsModule} from "@angular/material/tabs";
     SidenavListComponent,
     HomepageComponent,
     ResiduesComponent,
-    SalesComponent
+    SalesComponent,
+    ActionsPanelComponent,
+    DatePickerComponent
   ],
     imports: [
       BrowserModule,
@@ -43,7 +46,11 @@ import {MatTabsModule} from "@angular/material/tabs";
       MatIconModule,
       MatButtonModule,
       MatListModule,
-      MatTabsModule
+      MatTabsModule,
+      MatNativeDateModule,
+      MatDatepickerModule,
+      MatInputModule,
+      MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

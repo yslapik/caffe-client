@@ -1,14 +1,8 @@
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
   height: 100%;
 }
-
-mat-sidenav {
-  background-color: aqua;
-  width: 250px;
-}
-
 main {
-  padding: 10px;
+  padding: 0px;
 }
 /* for sidenav to take a whole page */
 html, body {

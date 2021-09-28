@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
 
 import {MatTableDataSource} from "@angular/material/table";
-import {Position} from "../../models";
+import {Position} from "../../../models";
+
 
 
 @Component({
@@ -11,7 +12,7 @@ import {Position} from "../../models";
 })
 
 export class ItemsTableComponent {
-  displayedColumns = ['name', 'price', 'count', 'dailyAmount', 'sum'];
+  displayedColumns = ['name', 'price', 'count', 'dailyAmount', 'sum', 'menu'];
   dataSource = new MatTableDataSource(initialData);
 
   valuechange(record: any) {
