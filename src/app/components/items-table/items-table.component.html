@@ -16,7 +16,7 @@
     <ng-container matColumnDef="count" class="count-container">
       <mat-header-cell *matHeaderCellDef> Продано </mat-header-cell>
       <mat-cell *matCellDef="let position">
-        <input matInput [value]="position.count" [(ngModel)]="position.count" (ngModelChange)="valuechange(position)">
+        <input matInput [value]="position.count" [(ngModel)]="position.count" (blur)="valuechange(position)">
       </mat-cell>
     </ng-container>
 

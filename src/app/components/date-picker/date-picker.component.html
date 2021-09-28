@@ -1,6 +1,9 @@
-<mat-form-field appearance="fill">
-  <mat-label>Choose a date</mat-label>
-  <input matInput [matDatepicker]="picker">
+<form  [formGroup]="testForm" >
+<mat-form-field class="mr-sm-24">
+  <input matInput [matDatepicker]="picker" placeholder="Дата продаж"
+         autocomplete="off"
+         name="date" formControlName="date">
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
+  <mat-datepicker  [startAt]="date" #picker></mat-datepicker>
 </mat-form-field>
+</form>
