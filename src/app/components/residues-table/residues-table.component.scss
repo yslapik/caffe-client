@@ -1,0 +1,27 @@
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.mat-row {
+  align-items: stretch;
+
+  .mat-cell {
+    display: flex;
+    align-items: center;
+  }
+}
+.mat-column-symbol, .mat-column-name {
+  max-width: 160px;
+}
+input {
+  float:right;
+  width:200px;
+  border:0px solid #dadada;
+  font-size:20px;
+  padding:5px;
+  margin-top:-10px;
+}
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  border-bottom-width: 0;
+}
