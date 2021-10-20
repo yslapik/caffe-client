@@ -1,0 +1,5 @@
+<mat-grid-list  cols="6" >
+  <mat-grid-tile *ngFor="let orderItem of orderItems">
+    <order-dashboard-item [orderItem]="orderItem"></order-dashboard-item>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,31 @@
+.order-dashboard-item_img-block {
+  height:200px;
+  width: 200px;
+}
+.order-dashboard-item {
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.order-dashboard-item_caption {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: transparentize($color: #000000, $amount: 0.50);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 5px;
+
+  transition: all 0.3s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.order-dashboard-item:hover .order-dashboard-item_caption {
+  visibility: visible;
+  opacity: 1;
+}

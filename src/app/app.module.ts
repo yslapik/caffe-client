@@ -19,6 +19,10 @@ import { ActionsPanelComponent } from './navigation/sales/actionsPanel/actionsPa
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatInputModule} from "@angular/material/input";
 import {MatMenuModule} from "@angular/material/menu";
+import { OrderDashboardComponent } from './components/order-dashboard/order-dashboard.component';
+import { OrderDashboardItemComponent } from './components/order-dashboard/order-dashboard-item/order-dashboard-item.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import { OrderTableComponent } from './components/order-table/order-table.component';
 
 @NgModule({
   declarations: [
@@ -32,27 +36,31 @@ import {MatMenuModule} from "@angular/material/menu";
     ActionsPanelComponent,
     DatePickerComponent,
     ResiduesTableComponent,
-    OrdersComponent
+    OrdersComponent,
+    OrderDashboardComponent,
+    OrderDashboardItemComponent,
+    OrderTableComponent
   ],
     imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      MatTableModule,
-      FormsModule,
-      ReactiveFormsModule,
-      MatFormFieldModule,
-      MatToolbarModule,
-      MatSidenavModule,
-      MatIconModule,
-      MatButtonModule,
-      MatListModule,
-      MatTabsModule,
-      MatNativeDateModule,
-      MatDatepickerModule,
-      MatInputModule,
-      MatMenuModule
-  ],
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatButtonModule,
+        MatListModule,
+        MatTabsModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
+        MatInputModule,
+        MatMenuModule,
+        MatGridListModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
