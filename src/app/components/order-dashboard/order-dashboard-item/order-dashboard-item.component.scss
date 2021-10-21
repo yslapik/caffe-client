@@ -1,11 +1,13 @@
 .order-dashboard-item_img-block {
   height:200px;
   width: 200px;
+  border-radius: 5px;
 }
 .order-dashboard-item {
   cursor: pointer;
   position: relative;
   box-sizing: border-box;
+
 }
 
 .order-dashboard-item_caption {
@@ -19,6 +21,7 @@
   right: 0;
   color: white;
   padding: 5px;
+  border-radius: 5px;
 
   transition: all 0.3s ease;
   visibility: hidden;
@@ -28,4 +31,14 @@
 .order-dashboard-item:hover .order-dashboard-item_caption {
   visibility: visible;
   opacity: 1;
+}
+.button-minus-one{
+  margin: 5px;
+  color: darkturquoise;
+  position:absolute; top:0; left:0;
+}
+.button-remove-all{
+  margin: 5px;
+  color: darkturquoise;
+  position:absolute; top:0; right:0;
 }

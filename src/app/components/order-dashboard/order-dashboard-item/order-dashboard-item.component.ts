@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {OrderItem} from "../../../../models";
+import {Position} from "../../../../models";
 
 @Component({
   selector: 'order-dashboard-item',
@@ -9,12 +9,12 @@ import {OrderItem} from "../../../../models";
 export class OrderDashboardItemComponent implements OnInit {
 
   @Input()
-  orderItem?: OrderItem;
+  orderItem?: Position;
 
   @Output()
   click = new EventEmitter<void>();
 
-  onOrderListItemClick(orderItem?: OrderItem) {
+  onOrderListItemClick(orderItem?: Position) {
     this.click.emit();
   }
   constructor() { }

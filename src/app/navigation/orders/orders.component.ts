@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {OrderItem} from "../../../models";
+import {Position} from "../../../models";
 
 
 
@@ -11,195 +11,45 @@ import {OrderItem} from "../../../models";
 })
 export class OrdersComponent {
   @Input()
-  OrdersMock: OrderItem[] = [
+  OrdersMock: Position[] = [
     {
+      id:'1e4rd',
       src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
+      name: 'Espresso',
+      price:666
     },  {
+      id:'1e4rc',
       src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
+      name: 'Americano',
+      price:76868768
     },
     {
+      id:'1e4re',
       src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
+      name: 'Espresso',
+      price:22
     },  {
+      id:'1e4rf',
       src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
+      name: 'Americano',
+      price:30
     },  {
+      id:'1e4rg',
       src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
+      name: 'Espresso',
+      price:12.50
     },  {
+      id:'1e4rt',
       src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
+      name: 'Americano',
+      price:123
     },
     {
+      id:'1e4rs',
       src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
-    {
-      src: 'https://picsum.photos/200',
-      caption: 'Espresso',
-      amount:0
-    },  {
-      src: 'https://picsum.photos/200',
-      caption: 'Americano',
-      amount:0
-    },
+      name: 'Espresso',
+      price:12
+    }
   ];
-  orders:OrderItem[] = this.OrdersMock;
+  positions:Position[] = this.OrdersMock;
 }

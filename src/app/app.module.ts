@@ -23,6 +23,7 @@ import { OrderDashboardComponent } from './components/order-dashboard/order-dash
 import { OrderDashboardItemComponent } from './components/order-dashboard/order-dashboard-item/order-dashboard-item.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { OrderTableComponent } from './components/order-table/order-table.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { OrderTableComponent } from './components/order-table/order-table.compon
         MatInputModule,
         MatMenuModule,
         MatGridListModule,
+      MatExpansionModule
     ],
   providers: [],
   bootstrap: [AppComponent]

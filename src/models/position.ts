@@ -1,8 +1,6 @@
 export interface Position {
   id: string;
+  src: string;
   name: string;
   price: number;
-  count: number;
-  dailyAmount: number;
-  sum:number
 }

@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {OrderItem} from "../../../models";
-import {coerceNumberProperty} from "@angular/cdk/coercion";
+import {Position} from "../../../models";
 
 @Component({
   selector: 'order-dashboard',
@@ -9,12 +8,12 @@ import {coerceNumberProperty} from "@angular/cdk/coercion";
 })
 export class OrderDashboardComponent implements OnInit {
   @Input()
-  orderItems: OrderItem[] = [];
+  orderItems: Position[] = [];
 
   @Output()
-  click = new EventEmitter<OrderItem>();
+  click = new EventEmitter<Position>();
 
-  onOrderListItemClick(orderItem: OrderItem) {
+  onOrderListItemClick(orderItem: Position) {
     this.click.emit(orderItem);
   }
 

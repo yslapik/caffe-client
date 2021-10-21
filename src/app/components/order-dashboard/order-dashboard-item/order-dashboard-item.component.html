@@ -1,6 +1,15 @@
 <div class="order-dashboard-item">
-  <div fxFlexFill class = "order-dashboard-item_img-block" [ngStyle]="{'background-image': 'url(' + orderItem?.src  + ')'}"></div>
-  <div class="order-dashboard-item_caption">  {{orderItem?.caption}}</div>
+  <div fxFlexFill class = "order-dashboard-item_img-block"
+       [ngStyle]="{'background-image': 'url(' + orderItem?.src  + ')'}"></div>
+  <div class="order-dashboard-item_caption">
+    {{orderItem?.name?.toUpperCase() + '      Цена: ' + orderItem?.price}}
+  </div>
+  <button class ="button-minus-one">
+    <mat-icon>remove_circle</mat-icon>
+  </button>
+  <button class ="button-remove-all">
+    <mat-icon>delete_sweep</mat-icon>
+  </button>
 </div>
 
 
