@@ -1,5 +1,6 @@
-import {Component, Input, Output} from '@angular/core';
+import {Component, Input, Output, ViewChild} from '@angular/core';
 import {Position, OrderItem} from "../../../models";
+import {MatTable} from "@angular/material/table";
 
 @Component({
   selector: 'orders',
