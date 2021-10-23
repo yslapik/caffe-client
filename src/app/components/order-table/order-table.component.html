@@ -1,11 +1,24 @@
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Заказ
-    </mat-panel-title>
-    <mat-panel-description>
-      Кол-во позиций в заказе
-      <mat-icon>account_circle</mat-icon>
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-</mat-expansion-panel>
+<div class="mat-elevation-z8">
+  <mat-table #table [dataSource]="currentOrderPositions">
+    <!-- Name Column -->
+    <ng-container matColumnDef="positionName">
+      <mat-header-cell *matHeaderCellDef> Позиция </mat-header-cell>
+      <mat-cell *matCellDef="let item">{{item.positionName}} </mat-cell>
+    </ng-container>
+
+    <!-- price Column -->
+    <ng-container matColumnDef="priceTotal">
+      <mat-header-cell *matHeaderCellDef> Цена </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{item.priceTotal}} </mat-cell>
+    </ng-container>
+
+    <!-- Count Column -->
+    <ng-container matColumnDef="orderAmount" class="count-container">
+      <mat-header-cell *matHeaderCellDef> Кол-во в заказе </mat-header-cell>
+      <mat-cell *matCellDef="let item">{{item.orderAmount}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

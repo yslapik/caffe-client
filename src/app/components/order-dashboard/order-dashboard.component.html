@@ -1,5 +1,9 @@
 <mat-grid-list  cols="6" >
-  <mat-grid-tile *ngFor="let orderItem of orderItems">
-    <order-dashboard-item [orderItem]="orderItem"></order-dashboard-item>
+  <mat-grid-tile *ngFor="let item of displayPositions">
+    <order-dashboard-item [positionItem]="item"
+                          (addClick)="onOrderListItemAdd(item)"
+                          (removeClick)="onOrderListItemRemove(item)"
+                          (removeAllClick)="onOrderListItemRemoveAll(item)">
+    </order-dashboard-item>
   </mat-grid-tile>
 </mat-grid-list>

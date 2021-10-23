@@ -9,13 +9,25 @@ import {Position} from "../../../../models";
 export class OrderDashboardItemComponent implements OnInit {
 
   @Input()
-  orderItem?: Position;
+  positionItem?: Position;
 
   @Output()
-  click = new EventEmitter<void>();
+  addClick = new EventEmitter<void>();
 
   onOrderListItemClick(orderItem?: Position) {
-    this.click.emit();
+    this.addClick.emit();
+  }
+  @Output()
+  removeClick = new EventEmitter<void>();
+
+  onOrderListItemRemoveClick(orderItem?: Position) {
+    this.removeClick.emit();
+  }
+  @Output()
+  removeAllClick = new EventEmitter<void>();
+
+  onOrderListItemRemoveAllClick(orderItem?: Position) {
+    this.removeAllClick.emit();
   }
   constructor() { }
 

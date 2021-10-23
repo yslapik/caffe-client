@@ -1,17 +1,16 @@
+<div>{{positionsInOrder.length}}</div>
 <mat-tab-group>
-  <mat-tab label="Заказ">
-    <mat-tab-group>
-      <div><order-table></order-table></div>
-    </mat-tab-group>
-  </mat-tab>
   <mat-tab label="Дашборд заказов">
     <mat-tab-group>
     <mat-tab label="Напитки">
-      <div><order-dashboard [orderItems]="positions"></order-dashboard></div>
+      <div><order-dashboard [displayPositions]="positions" [currentOrderPositions]="positionsInOrder"></order-dashboard></div>
     </mat-tab>
     <mat-tab label="Еда">
-      <order-dashboard [orderItems]="positions"></order-dashboard>
+      <order-dashboard [displayPositions]="positions" [currentOrderPositions]="positionsInOrder"></order-dashboard>
     </mat-tab>
   </mat-tab-group>
+  </mat-tab>
+  <mat-tab label="Заказ">
+      <div><order-table [currentOrderPositions]="positionsInOrder"></order-table></div>
   </mat-tab>
 </mat-tab-group>

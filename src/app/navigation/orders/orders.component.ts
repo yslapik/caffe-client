@@ -1,8 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {Position} from "../../../models";
-
-
-
+import {Component, Input, Output} from '@angular/core';
+import {Position, OrderItem} from "../../../models";
 
 @Component({
   selector: 'orders',
@@ -52,4 +49,7 @@ export class OrdersComponent {
     }
   ];
   positions:Position[] = this.OrdersMock;
+
+  @Output()
+  positionsInOrder: OrderItem[] = [];
 }
