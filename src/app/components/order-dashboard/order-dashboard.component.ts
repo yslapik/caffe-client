@@ -38,9 +38,15 @@ export class OrderDashboardComponent implements OnInit {
     let existingOrderItem = this.currentOrderPositions.find(x => x.positionName == orderItem.name);
     if(existingOrderItem){
       let index : number = this.currentOrderPositions.indexOf(existingOrderItem, 0)!;
-      if(this.currentOrderPositions[index].orderAmount>0){
-        this.currentOrderPositions[index].orderAmount -=1;
-        this.currentOrderPositions[index].priceTotal -= orderItem.price;
+      let orderPosition = this.currentOrderPositions[index];
+      if (orderPosition.orderAmount == 1)
+      {
+        this.currentOrderPositions.splice(index, 1);
+        return;
+      }
+      if(orderPosition.orderAmount > 0){
+        orderPosition.orderAmount -=1;
+        orderPosition.priceTotal -= orderItem.price;
       }
     }
   }
