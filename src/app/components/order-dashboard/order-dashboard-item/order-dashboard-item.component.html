@@ -1,16 +1,27 @@
 <div class="order-dashboard-item">
-  <div fxFlexFill class = "order-dashboard-item_img-block"
+  <div fxFlexFill class = "order-dashboard-item_img-block mat-elevation-z4"
+       matRipple
+       [matRippleCentered]="false"
+       [matRippleDisabled]="false"
+       [matRippleUnbounded]="false"
+       [matRippleRadius]="200"
        [ngStyle]="{'background-image': 'url(' + positionItem?.src  + ')'}"
        (click)="onOrderListItemClick()"
   ></div>
   <div class="order-dashboard-item_caption">
     {{positionItem?.name?.toUpperCase() + '      Цена: ' + positionItem?.price}}
   </div>
-  <button class ="button-minus-one" (click) = "onOrderListItemRemoveClick()">
-    <mat-icon>remove_circle</mat-icon>
+  <button class ="button-minus-one" (click) = "onOrderListItemRemoveClick()"
+          #tooltip="matTooltip"
+          matTooltip="Удалить 1 единицу позиции из заказа"
+  >
+    <mat-icon>remove</mat-icon>
   </button>
-  <button class ="button-remove-all" (click)="onOrderListItemRemoveAllClick()">
-    <mat-icon>delete_sweep</mat-icon>
+  <button class ="button-remove-all" (click)="onOrderListItemRemoveAllClick()"
+          #tooltip="matTooltip"
+          matTooltip="Удалить полностью позицию из заказа"
+  >
+    <mat-icon>delete</mat-icon>
   </button>
 </div>
 

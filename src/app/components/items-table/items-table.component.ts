@@ -1,9 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import {MatTableDataSource} from "@angular/material/table";
-import {DailySale} from "../../../models";
-
-
+import {ModelDataSource} from "../../ModelDataSource";
+import {RestDataLoaderService} from "../../services/rest-data-loader.service";
+import {TableItem} from "../../../models";
 
 @Component({
   selector: 'items-table',
@@ -11,19 +10,20 @@ import {DailySale} from "../../../models";
   styleUrls: ['./items-table.component.scss']
 })
 
-export class ItemsTableComponent {
-  displayedColumns = ['name', 'price', 'count', 'dailyAmount', 'sum', 'menu'];
-  dataSource = new MatTableDataSource(initialData);
+export class ItemsTableComponent implements OnInit {
+  tableItem!: TableItem;
+  //displayedColumns = ['name', 'price', 'count', 'dailyAmount', 'sum', 'menu'];
+  dataSource!: ModelDataSource
+  constructor(private dataService: RestDataLoaderService) {}
 
   valuechange(record: any) {
     let parsedCount = parseInt(record.count);
     record.dailyAmount += isNaN(parsedCount)? 0: parsedCount ;
     record.sum += (record.count * record.price);
   }
-}
 
-const initialData: DailySale[] = [
-  {id: '1', name: 'Espresso', price: 12.50,count:0, dailyAmount:0, sum:0},
-  {id: '2', name: 'Americano', price: 12.50,count:0, dailyAmount:0, sum:0},
-  {id: '3', name: 'Latte', price: 18,count:0, dailyAmount:0, sum:0},
-];
+  ngOnInit() {
+    this.dataSource = new ModelDataSource(this.dataService);
+    this.dataSource.loadData();
+  }
+}

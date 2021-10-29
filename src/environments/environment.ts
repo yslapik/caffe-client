@@ -1,16 +1,43 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+import {TableItem, SideNavListItem} from "../models";
 
 export const environment = {
-  production: false
-};
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+  production: false,
+  sidenavList: [
+    {
+      routerLink: "/orders",
+      icon: "receipt",
+      caption: "Создание заказов"
+    },
+    {
+      routerLink: "/sales",
+      icon: "reorder",
+      caption: "Продажи"
+    },
+    {
+      routerLink: "/residues",
+      icon: "shop",
+      caption: "Остатки"
+    },
+    {
+      routerLink: "/lookups",
+      icon: "format_list_bulleted",
+      caption: "Справочники"
+    },
+    {
+      routerLink: "/statistics",
+      icon: "transform",
+      caption: "Статистика"
+    }
+  ] as SideNavListItem[],
+  lookupEditList: [
+    {
+      caption: "Позиции"
+    },
+    {
+      caption: "Категории"
+    },
+    {
+      caption: "Остатки"
+    }
+  ] as TableItem[]
+}

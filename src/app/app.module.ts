@@ -24,6 +24,11 @@ import { OrderDashboardItemComponent } from './components/order-dashboard/order-
 import {MatGridListModule} from "@angular/material/grid-list";
 import { OrderTableComponent } from './components/order-table/order-table.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatRippleModule} from '@angular/material/core'
+import {MatTooltipModule} from "@angular/material/tooltip";
+import { LookupsComponent } from './navigation/lookups/lookups.component';
+import { TableBaseComponent } from './components/table-base/table-base.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,29 +45,34 @@ import {MatExpansionModule} from '@angular/material/expansion';
     OrdersComponent,
     OrderDashboardComponent,
     OrderDashboardItemComponent,
-    OrderTableComponent
+    OrderTableComponent,
+    LookupsComponent,
+    TableBaseComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatTableModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatToolbarModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatButtonModule,
-        MatListModule,
-        MatTabsModule,
-        MatNativeDateModule,
-        MatDatepickerModule,
-        MatInputModule,
-        MatMenuModule,
-        MatGridListModule,
-      MatExpansionModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
+    MatTabsModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatMenuModule,
+    MatGridListModule,
+    MatExpansionModule,
+    MatRippleModule,
+    MatTooltipModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -32,13 +32,16 @@
   visibility: visible;
   opacity: 1;
 }
-.button-minus-one{
+.button-minus-one {
   margin: 5px;
-  color: darkturquoise;
+  opacity: 0.8;
+  color: red;
   position:absolute; top:0; left:0;
 }
-.button-remove-all{
+.button-remove-all {
   margin: 5px;
-  color: darkturquoise;
+  opacity: 0.8;
+  color: red;
   position:absolute; top:0; right:0;
 }
+

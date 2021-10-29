@@ -7,7 +7,7 @@ import {MatTable} from "@angular/material/table";
   templateUrl: './order-table.component.html',
   styleUrls: ['./order-table.component.scss']
 })
-export class OrderTableComponent implements DoCheck{
+export class OrderTableComponent implements DoCheck {
 
  @Input()
  currentOrderPositions!: OrderItem[];

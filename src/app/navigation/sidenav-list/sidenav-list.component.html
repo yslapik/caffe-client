@@ -1,14 +1,5 @@
-<mat-nav-list>
-  <a mat-list-item routerLink="/orders" (click)="onSidenavClose()">
-    <mat-icon>assignment</mat-icon><span class="nav-caption">Создание заказов</span>
-  </a>
-  <a mat-list-item routerLink="/sales" (click)="onSidenavClose()">
-    <mat-icon>reorder</mat-icon> <span class="nav-caption">Продажи</span>
-  </a>
-  <a mat-list-item routerLink="/residues" (click)="onSidenavClose()">
-    <mat-icon>shop</mat-icon> <span class="nav-caption">Остатки</span>
-  </a>
-  <a mat-list-item routerLink="/statistics" (click)="onSidenavClose()">
-    <mat-icon>transform</mat-icon><span class="nav-caption">Статистика</span>
+<mat-nav-list >
+  <a  *ngFor="let sidenavListItem of sidenavList" mat-list-item routerLink={{sidenavListItem.routerLink}} (click)="onSidenavClose()">
+    <mat-icon >{{sidenavListItem.icon}}</mat-icon><span class="nav-caption">{{sidenavListItem.caption}}</span>
   </a>
 </mat-nav-list>
