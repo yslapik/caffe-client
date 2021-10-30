@@ -1,5 +1,5 @@
 export interface TableItem {
-  caption:string;
-  displayColumns:string[];
   modelName: string;
+  caption:string;
+  displayColumns:any[];
 }

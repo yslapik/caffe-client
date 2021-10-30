@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 import {ModelDataSource} from "../../ModelDataSource";
 import {RestDataLoaderService} from "../../services/rest-data-loader.service";
@@ -11,18 +11,22 @@ import {TableItem} from "../../../models";
 })
 
 export class ItemsTableComponent implements OnInit {
+  @Input()
   tableItem!: TableItem;
-  //displayedColumns = ['name', 'price', 'count', 'dailyAmount', 'sum', 'menu'];
+  displayedColumns!:string[];
   dataSource!: ModelDataSource
   constructor(private dataService: RestDataLoaderService) {}
 
-  valuechange(record: any) {
+  valueChange(record: any) {
     let parsedCount = parseInt(record.count);
-    record.dailyAmount += isNaN(parsedCount)? 0: parsedCount ;
+    record.dailyAmount += isNaN(parsedCount)? 0: parsedCount;
     record.sum += (record.count * record.price);
+    record.count = 0;
   }
 
   ngOnInit() {
+    this.displayedColumns = this.tableItem.displayColumns.map(c => c.name);
+    this.displayedColumns.push('menu');
     this.dataSource = new ModelDataSource(this.dataService);
     this.dataSource.loadData();
   }
