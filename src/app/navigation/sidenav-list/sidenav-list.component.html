@@ -1,5 +1,13 @@
-<mat-nav-list >
-  <a  *ngFor="let sidenavListItem of sidenavList" mat-list-item routerLink={{sidenavListItem.routerLink}} (click)="onSidenavClose()">
-    <mat-icon >{{sidenavListItem.icon}}</mat-icon><span class="nav-caption">{{sidenavListItem.caption}}</span>
-  </a>
+<!--<mat-nav-list >-->
+<!--  <a  *ngFor="let sidenavListItem of sidenavList" mat-list-item routerLink={{sidenavListItem.routerLink}} (click)="onSidenavClose()">-->
+<!--    <mat-icon >{{sidenavListItem.icon}}</mat-icon><span class="nav-caption">{{sidenavListItem.caption}}</span>-->
+<!--    <div *ngIf="sidenavListItem.children !== undefined">-->
+<!--      <a  *ngFor="let child of sidenavListItem.children" mat-list-item routerLink={{child.routerLink}} (click)="onSidenavClose()">-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </a>-->
+<!--</mat-nav-list>-->
+
+<mat-nav-list>
+  <menu-list-item *ngFor="let item of sidenavList" [item]="item"></menu-list-item>
 </mat-nav-list>

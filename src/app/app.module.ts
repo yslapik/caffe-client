@@ -28,6 +28,7 @@ import {MatRippleModule} from '@angular/material/core'
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { LookupsComponent } from './navigation/lookups/lookups.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuListItemComponent } from './components/menu-list-item/menu-list-item.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     OrderDashboardComponent,
     OrderDashboardItemComponent,
     OrderTableComponent,
-    LookupsComponent
+    LookupsComponent,
+    MenuListItemComponent
   ],
   imports: [
     BrowserModule,

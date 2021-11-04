@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {TableItem} from "../../../models";
 import {environment} from "../../../environments/environment";
 
 @Component({
@@ -8,8 +7,7 @@ import {environment} from "../../../environments/environment";
   styleUrls: ['./lookups.component.scss']
 })
 export class LookupsComponent implements OnInit {
-  lookupItems: TableItem[] = environment.lookupEditList;
-
+  lookupTemplateList = environment.lookupTemplateList;
   constructor() { }
 
   ngOnInit(): void {

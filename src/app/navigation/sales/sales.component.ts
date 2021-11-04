@@ -1,38 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'sales',
   templateUrl: './sales.component.html',
   styleUrls: ['./sales.component.scss']
 })
 export class SalesComponent implements OnInit {
-  tableItem = {
-    modelName: 'sales',
-    caption:'Продажи',
-    displayColumns:[
-      {
-        name:'name',
-        header:'Позиция'
-      },
-      {
-        name:'price',
-        header:'Цена'
-      },
-      {
-        name:'count',
-        header:'Продано',
-        isEditable:true
-      },
-      {
-        name:'dailyAmount',
-        header:'Продаж за день'
-      },
-      {
-        name:'sum',
-        header:'Общая сумма'
-      }
-    ]
-  };
+  tableItem = environment.salesTemplate
   constructor() { }
 
   ngOnInit(): void {

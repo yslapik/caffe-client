@@ -1,5 +1,6 @@
 export interface SideNavListItem {
   routerLink:string;
-  icon:string;
+  icon?:string;
   caption:string;
+  children?:SideNavListItem[]
 }

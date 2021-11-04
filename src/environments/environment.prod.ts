@@ -1,5 +1,5 @@
 import {SideNavListItem} from "../models/structure/sideNavListItem";
-import {TableItem} from "../models/structure/tableItem";
+import {TableTemplate} from "../models/structure/tableTemplate";
 
 export const environment = {
   production: true,
@@ -30,7 +30,7 @@ export const environment = {
       caption: "Статистика"
     }
   ] as SideNavListItem[],
-  lookupEditList: [
+  lookupTemplateList: [
     {
       caption: "Позиции"
     },
@@ -43,5 +43,5 @@ export const environment = {
     {
       caption: "Остатки"
     }
-  ] as TableItem[]
+  ] as TableTemplate[]
 };

@@ -1,4 +1,4 @@
-import {TableItem, SideNavListItem} from "../models";
+
 
 export const environment = {
   production: false,
@@ -21,23 +21,72 @@ export const environment = {
     {
       routerLink: "/lookups",
       icon: "format_list_bulleted",
-      caption: "Справочники"
+      caption: "Справочники",
+      children: [
+        {
+          routerLink: "/lookups/positions",
+          caption: "Позиции",
+        },
+        {
+          routerLink: "/lookups/positionTypes",
+          caption: "Категории",
+        },
+        {
+          routerLink: "/lookups/residues",
+          caption: "Остатки",
+        },
+      ]
     },
     {
       routerLink: "/statistics",
       icon: "transform",
       caption: "Статистика"
     }
-  ] as SideNavListItem[],
-  lookupEditList: [
+  ],
+
+  lookupTemplateList: [
     {
-      caption: "Позиции"
+      modelName:"Position",
+      caption: "Позиции",
+      displayColumns:[]
     },
     {
-      caption: "Категории"
+      modelName:"PositionType",
+      caption: "Категории",
+      displayColumns:[]
     },
     {
-      caption: "Остатки"
+      modelName:"Residue",
+      caption: "Остатки",
+      displayColumns:[]
     }
-  ] as TableItem[]
+  ],
+
+  salesTemplate: {
+      modelName: 'sales',
+      caption:'Продажи',
+      displayColumns:[
+        {
+          name:'name',
+          header:'Позиция'
+        },
+        {
+          name:'price',
+          header:'Цена'
+        },
+        {
+          name:'count',
+          header:'Продано',
+          isEditable:true
+        },
+        {
+          name:'dailyAmount',
+          header:'Продаж за день'
+        },
+        {
+          name:'sum',
+          header:'Общая сумма'
+        }
+      ]
+    }
 }

@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 import {ModelDataSource} from "../../ModelDataSource";
 import {RestDataLoaderService} from "../../services/rest-data-loader.service";
-import {TableItem} from "../../../models";
+import {TableTemplate} from "../../../models";
 
 @Component({
   selector: 'items-table',
@@ -12,7 +12,7 @@ import {TableItem} from "../../../models";
 
 export class ItemsTableComponent implements OnInit {
   @Input()
-  tableItem!: TableItem;
+  tableItem!: TableTemplate;
   displayedColumns!:string[];
   dataSource!: ModelDataSource
   constructor(private dataService: RestDataLoaderService) {}
