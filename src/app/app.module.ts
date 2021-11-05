@@ -26,9 +26,12 @@ import { OrderTableComponent } from './components/order-table/order-table.compon
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatRippleModule} from '@angular/material/core'
 import {MatTooltipModule} from "@angular/material/tooltip";
-import { LookupsComponent } from './navigation/lookups/lookups.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuListItemComponent } from './components/menu-list-item/menu-list-item.component';
+import {LookupsComponent} from "./components/lookup/lookups.component";
+import { PositionsLookupComponent } from './navigation/lookups/positions-lookup/positions-lookup.component';
+import { PositionTypesLookupComponent } from './navigation/lookups/position-types-lookup/position-types-lookup.component';
+import { ResiduesLookupComponent } from './navigation/lookups/residues-lookup/residues-lookup.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { MenuListItemComponent } from './components/menu-list-item/menu-list-ite
     OrderDashboardItemComponent,
     OrderTableComponent,
     LookupsComponent,
-    MenuListItemComponent
+    MenuListItemComponent,
+    PositionsLookupComponent,
+    PositionTypesLookupComponent,
+    ResiduesLookupComponent
   ],
   imports: [
     BrowserModule,

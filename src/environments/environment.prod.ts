@@ -1,8 +1,7 @@
-import {SideNavListItem} from "../models/structure/sideNavListItem";
-import {TableTemplate} from "../models/structure/tableTemplate";
+
 
 export const environment = {
-  production: true,
+  production: false,
   sidenavList: [
     {
       routerLink: "/orders",
@@ -22,26 +21,72 @@ export const environment = {
     {
       routerLink: "/lookups",
       icon: "format_list_bulleted",
-      caption: "Справочники"
+      caption: "Справочники",
+      children: [
+        {
+          routerLink: "/lookups/positions",
+          caption: "Позиции",
+        },
+        {
+          routerLink: "/lookups/positionTypes",
+          caption: "Категории",
+        },
+        {
+          routerLink: "/lookups/residues",
+          caption: "Остатки",
+        },
+      ]
     },
     {
       routerLink: "/statistics",
       icon: "transform",
       caption: "Статистика"
     }
-  ] as SideNavListItem[],
+  ],
+
   lookupTemplateList: [
     {
-      caption: "Позиции"
+      modelName:"Position",
+      caption: "Позиции",
+      displayColumns:[]
     },
     {
-      caption: "Категории"
+      modelName:"PositionType",
+      caption: "Категории",
+      displayColumns:[]
     },
     {
-      caption: "Категории"
-    },
-    {
-      caption: "Остатки"
+      modelName:"Residue",
+      caption: "Остатки",
+      displayColumns:[]
     }
-  ] as TableTemplate[]
-};
+  ],
+
+  salesTemplate: {
+    modelName: 'sales',
+    caption:'Продажи',
+    displayColumns:[
+      {
+        name:'name',
+        header:'Позиция'
+      },
+      {
+        name:'price',
+        header:'Цена'
+      },
+      {
+        name:'count',
+        header:'Продано',
+        isEditable:true
+      },
+      {
+        name:'dailyAmount',
+        header:'Продаж за день'
+      },
+      {
+        name:'sum',
+        header:'Общая сумма'
+      }
+    ]
+  }
+}
