@@ -1,4 +1,4 @@
-export interface DailySale {
+export interface DailySales {
   id: string;
   name: string;
   price: number;

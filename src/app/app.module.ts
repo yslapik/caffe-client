@@ -15,7 +15,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatNativeDateModule} from '@angular/material/core';
-import { ActionsPanelComponent } from './navigation/sales/actionsPanel/actionsPanel.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatInputModule} from "@angular/material/input";
 import {MatMenuModule} from "@angular/material/menu";
@@ -28,10 +27,10 @@ import {MatRippleModule} from '@angular/material/core'
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { HttpClientModule } from '@angular/common/http';
 import { MenuListItemComponent } from './components/menu-list-item/menu-list-item.component';
-import {LookupsComponent} from "./components/lookup/lookups.component";
 import { PositionsLookupComponent } from './navigation/lookups/positions-lookup/positions-lookup.component';
 import { PositionTypesLookupComponent } from './navigation/lookups/position-types-lookup/position-types-lookup.component';
 import { ResiduesLookupComponent } from './navigation/lookups/residues-lookup/residues-lookup.component';
+import {ActionsPanelComponent} from "./components/actionsPanel/actionsPanel.component";
 
 @NgModule({
   declarations: [
@@ -49,7 +48,6 @@ import { ResiduesLookupComponent } from './navigation/lookups/residues-lookup/re
     OrderDashboardComponent,
     OrderDashboardItemComponent,
     OrderTableComponent,
-    LookupsComponent,
     MenuListItemComponent,
     PositionsLookupComponent,
     PositionTypesLookupComponent,

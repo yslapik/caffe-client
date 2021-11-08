@@ -1,5 +1,5 @@
 import {ChangeDetectorRef, Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges, ViewChild} from '@angular/core';
-import {OrderItem} from "../../../models";
+import {OrderItems} from "../../../models";
 import {MatTable} from "@angular/material/table";
 
 @Component({
@@ -10,11 +10,11 @@ import {MatTable} from "@angular/material/table";
 export class OrderTableComponent implements DoCheck {
 
  @Input()
- currentOrderPositions!: OrderItem[];
+ currentOrderPositions!: OrderItems[];
   displayedColumns = ['positionName', 'priceTotal', 'orderAmount'];
   constructor() { }
 
-  @ViewChild('table') table!: MatTable<OrderItem>;
+  @ViewChild('table') table!: MatTable<OrderItems>;
 
   ngDoCheck(): void {
     this.table?.renderRows();

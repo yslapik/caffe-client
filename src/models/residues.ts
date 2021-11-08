@@ -1,4 +1,4 @@
-export interface Residue {
+export interface Residues {
   id: string;
   name: string;
   purchaseDate: Date;

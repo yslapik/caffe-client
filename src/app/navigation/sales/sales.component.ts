@@ -6,7 +6,7 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./sales.component.scss']
 })
 export class SalesComponent implements OnInit {
-  tableItem = environment.salesTemplate
+  tableItem = environment.tableTemplate.salesTemplate
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import {Component, Input, Output, ViewChild} from '@angular/core';
-import {Position, OrderItem} from "../../../models";
+import {Positions, OrderItems} from "../../../models";
 import {MatTable} from "@angular/material/table";
 
 @Component({
@@ -9,7 +9,7 @@ import {MatTable} from "@angular/material/table";
 })
 export class OrdersComponent {
   @Input()
-  OrdersMock: Position[] = [
+  OrdersMock: Positions[] = [
     {
       id:'1e4rd',
       src: 'https://picsum.photos/200',
@@ -49,8 +49,8 @@ export class OrdersComponent {
       price:12
     }
   ];
-  positions:Position[] = this.OrdersMock;
+  positions:Positions[] = this.OrdersMock;
 
   @Output()
-  positionsInOrder: OrderItem[] = [];
+  positionsInOrder: OrderItems[] = [];
 }

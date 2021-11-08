@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {environment} from "../../../../environments/environment";
 
 @Component({
   selector: 'position-types-lookup',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./position-types-lookup.component.scss']
 })
 export class PositionTypesLookupComponent implements OnInit {
-
+  template =  environment.tableTemplate.positionTypesLookup
   constructor() { }
 
   ngOnInit(): void {

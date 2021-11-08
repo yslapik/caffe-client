@@ -1,4 +1,4 @@
-export interface OrderItem{
+export interface OrderItems {
   id: string;
   positionName:string;
   positionId:string;

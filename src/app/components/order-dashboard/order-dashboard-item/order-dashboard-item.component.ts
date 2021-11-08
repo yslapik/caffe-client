@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Position} from "../../../../models";
+import {Positions} from "../../../../models";
 
 @Component({
   selector: 'order-dashboard-item',
@@ -9,24 +9,24 @@ import {Position} from "../../../../models";
 export class OrderDashboardItemComponent implements OnInit {
 
   @Input()
-  positionItem?: Position;
+  positionItem?: Positions;
 
   @Output()
   addClick = new EventEmitter<void>();
 
-  onOrderListItemClick(orderItem?: Position) {
+  onOrderListItemClick(orderItem?: Positions) {
     this.addClick.emit();
   }
   @Output()
   removeClick = new EventEmitter<void>();
 
-  onOrderListItemRemoveClick(orderItem?: Position) {
+  onOrderListItemRemoveClick(orderItem?: Positions) {
     this.removeClick.emit();
   }
   @Output()
   removeAllClick = new EventEmitter<void>();
 
-  onOrderListItemRemoveAllClick(orderItem?: Position) {
+  onOrderListItemRemoveAllClick(orderItem?: Positions) {
     this.removeAllClick.emit();
   }
   constructor() { }

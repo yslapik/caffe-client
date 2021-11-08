@@ -1,5 +1,3 @@
-
-
 export const environment = {
   production: false,
   sidenavList: [
@@ -25,14 +23,17 @@ export const environment = {
       children: [
         {
           routerLink: "/lookups/positions",
+          icon: "arrow_right",
           caption: "Позиции",
         },
         {
           routerLink: "/lookups/positionTypes",
+          icon: "arrow_right",
           caption: "Категории",
         },
         {
           routerLink: "/lookups/residues",
+          icon: "arrow_right",
           caption: "Остатки",
         },
       ]
@@ -44,25 +45,58 @@ export const environment = {
     }
   ],
 
-  lookupTemplateList: [
-    {
-      modelName:"Position",
+  tableTemplate:{
+    positionsLookup:{
+      modelName:"Positions",
       caption: "Позиции",
-      displayColumns:[]
+      displayColumns:[
+        {
+          name:'name',
+          header:'Название',
+          isEditable:true
+        },
+        {
+          name:'price',
+          header:'Цена',
+          isEditable:true
+        },
+        {
+          name:'src',
+          header:'Ссылка на иконку',
+          isEditable:true
+        },
+      ]
     },
-    {
-      modelName:"PositionType",
+    positionTypesLookup:{
+      modelName:"PositionTypes",
       caption: "Категории",
-      displayColumns:[]
+      displayColumns:[
+        {
+          name:'name',
+          header:'Название категории',
+          isEditable:true
+        },
+      ]
     },
-    {
-      modelName:"Residue",
+    residuesLookup: {
+      modelName:"Residues",
       caption: "Остатки",
-      displayColumns:[]
-    }
-  ],
-
-  salesTemplate: {
+      displayColumns:[
+        {
+          name:'name',
+          header:'Название'
+        },
+        {
+          name:'purchaseDate',
+          header:'Дата закупки'
+        },
+        {
+          name:'totalAmount',
+          header:'Общее кол-во'
+        },
+      ]
+    },
+    salesTemplate: {
       modelName: 'sales',
       caption:'Продажи',
       displayColumns:[
@@ -89,4 +123,5 @@ export const environment = {
         }
       ]
     }
+  }
 }

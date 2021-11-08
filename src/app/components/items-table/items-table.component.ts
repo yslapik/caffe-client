@@ -26,8 +26,9 @@ export class ItemsTableComponent implements OnInit {
 
   ngOnInit() {
     this.displayedColumns = this.tableItem.displayColumns.map(c => c.name);
-    this.displayedColumns.push('menu');
+    this.displayedColumns.push('delete');
+    this.displayedColumns.push('save');
     this.dataSource = new ModelDataSource(this.dataService);
-    this.dataSource.loadData();
+    this.dataSource.loadData(this.tableItem);
   }
 }

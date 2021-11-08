@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {OrderItem, Position} from "../../../models";
+import {OrderItems, Positions} from "../../../models";
 
 @Component({
   selector: 'order-dashboard',
@@ -8,14 +8,14 @@ import {OrderItem, Position} from "../../../models";
 })
 export class OrderDashboardComponent implements OnInit {
   @Input()
-  displayPositions: Position[] = [];
+  displayPositions: Positions[] = [];
   @Input()
-  currentOrderPositions!: OrderItem[]
+  currentOrderPositions!: OrderItems[]
 
   @Output()
-  click = new EventEmitter<Position>();
+  click = new EventEmitter<Positions>();
 
-  onOrderListItemAdd(orderItem: Position) {
+  onOrderListItemAdd(orderItem: Positions) {
     let existingOrderItem = this.currentOrderPositions.find(x => x.positionName == orderItem.name);
     if(existingOrderItem){
       let index : number = this.currentOrderPositions.indexOf(existingOrderItem, 0)!;
@@ -34,7 +34,7 @@ export class OrderDashboardComponent implements OnInit {
     }
   }
 
-  onOrderListItemRemove(orderItem: Position) {
+  onOrderListItemRemove(orderItem: Positions) {
     let existingOrderItem = this.currentOrderPositions.find(x => x.positionName == orderItem.name);
     if(existingOrderItem){
       let index : number = this.currentOrderPositions.indexOf(existingOrderItem, 0)!;
@@ -51,7 +51,7 @@ export class OrderDashboardComponent implements OnInit {
     }
   }
 
-  onOrderListItemRemoveAll(orderItem: Position) {
+  onOrderListItemRemoveAll(orderItem: Positions) {
     let existingOrderItem = this.currentOrderPositions.find(x => x.positionName == orderItem.name);
     if(existingOrderItem){
       let index :number = this.currentOrderPositions.indexOf(existingOrderItem, 0)!;
