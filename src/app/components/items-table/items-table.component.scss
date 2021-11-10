@@ -1,27 +1,18 @@
-.mat-table {
-  overflow: auto;
-  max-height: 500px;
+.table-container {
+  flex-direction: column;
+  min-width: 300px;
 }
 
-.mat-row {
-  align-items: stretch;
+.mat-form-field {
+  font-size: 14px;
+}
 
-  .mat-cell {
-    display: flex;
-    align-items: center;
-  }
-}
-.mat-column-symbol, .mat-column-name {
-  max-width: 160px;
-}
-input {
-  float:right;
-  width:200px;
-  border:0px solid #dadada;
-  font-size:14px;
-  padding:5px;
-  margin-top:-10px;
-}
 th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   border-bottom-width: 0;
+  min-width: 180px;
+}
+
+mat-icon {
+  cursor: pointer;
+  float: right;
 }

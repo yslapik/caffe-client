@@ -11,8 +11,13 @@ export class ActionsPanelComponent implements OnInit {
 
   @Input()
   table!:MatTable<any>;
+
   addItemClick() {
     (this.table.dataSource as ModelDataSource).appendData({});
+  }
+
+  saveItemsClick(){
+    (this.table.dataSource as ModelDataSource).saveData();
   }
   constructor() { }
   ngOnInit(): void {

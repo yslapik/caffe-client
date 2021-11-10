@@ -84,15 +84,18 @@ export const environment = {
       displayColumns:[
         {
           name:'name',
-          header:'Название'
+          header:'Название',
+          isEditable:true
         },
         {
           name:'purchaseDate',
-          header:'Дата закупки'
+          header:'Дата закупки',
+          isEditable:true
         },
         {
           name:'totalAmount',
-          header:'Общее кол-во'
+          header:'Общее кол-во',
+          isEditable:true
         },
       ]
     },

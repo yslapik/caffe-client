@@ -18,17 +18,28 @@ export class ItemsTableComponent implements OnInit {
   constructor(private dataService: RestDataLoaderService) {}
 
   valueChange(record: any) {
-    let parsedCount = parseInt(record.count);
-    record.dailyAmount += isNaN(parsedCount)? 0: parsedCount;
-    record.sum += (record.count * record.price);
-    record.count = 0;
+    //TODO переделать(попробовать на observable и подписываться на компоненте модели)
+    if(this.tableItem.modelName === 'sales'){
+      let parsedCount = parseInt(record.count);
+      record.dailyAmount += isNaN(parsedCount)? 0: parsedCount;
+      record.sum += (record.count * record.price);
+      record.count = 0;
+    }
+  }
+
+  deleteRecord(record: any){
+    this.dataSource.removeData(record);
+  }
+
+  save(){
+    this.dataSource.saveData();
   }
 
   ngOnInit() {
     this.displayedColumns = this.tableItem.displayColumns.map(c => c.name);
     this.displayedColumns.push('delete');
-    this.displayedColumns.push('save');
     this.dataSource = new ModelDataSource(this.dataService);
+    this.dataSource.modelName = this.tableItem.modelName;
     this.dataSource.loadData(this.tableItem);
   }
 }
